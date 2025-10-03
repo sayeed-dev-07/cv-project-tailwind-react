@@ -8,19 +8,52 @@ import Output from './components/Output'
 
 
 function App() {
+
+  const [inputShow, setInputShow] = useState(true);
+  function handleSubmit(){
   
+    setInputShow(false)
+  }
+  function handleEdit(){
+    setInputShow(true)
+  }
 
   return (
-    <>
-      {/* <form className='md:w-[80%] w-full lg:w-[60%] my-[0] sm:my-[5rem] py-[3rem] mx-auto px-[1rem] md:px-[3rem] shadow-xl flex flex-col'>
-        <GeneralSec />
-        <div className='w-full border-dashed border-1 my-[4rem]'></div>
-        <Information title='Education' name='School/College' position='Degree' to='Until (Skip if still studying)' idDate={[1, 2]} responsibilities = {false} />
-        <div className='w-full border-dashed border-1 my-[4rem]'></div>
-        <Information />
-        <button className='mt-[2rem] px-[1rem] py-[0.5rem] bg-[#f2f7fb] text-black cursor-pointer duration-150 w-[40%] md:w-[20%] mx-auto hover:bg-[#bed6ea] font-semibold'>Submit</button>
-      </form> */}
-      <Output />
+
+
+    
+    <> 
+      <div>
+        {
+          inputShow ? (
+
+            <form onSubmit={handleSubmit} className='md:w-[80%] w-full lg:w-[60%] my-[0] sm:my-[5rem] py-[3rem] mx-auto px-[1rem] md:px-[3rem] shadow-xl flex flex-col'>
+          <GeneralSec/>
+          <div className='w-full border-dashed border-1 my-[4rem]'></div>
+          <Information title='Education' name='School/College' position='Degree' to='Until (Skip if still studying)' idDate={[1, 2]} responsibilities = {false} />
+          <div className='w-full border-dashed border-1 my-[4rem]'></div>
+          <Information/>
+          <button type='submit' className='mt-[2rem] px-[1rem] py-[0.5rem] bg-[#f2f7fb] text-black cursor-pointer duration-150 w-[40%] md:w-[20%] mx-auto hover:bg-[#bed6ea] font-semibold'>Submit</button>
+        </form>
+
+          ):(
+            <div id='output' className=' md:w-[80%] w-full lg:w-[60%] my-[0] sm:my-[5rem]  mx-auto  shadow-xl pb-[5rem]'>
+            <Output />
+            <div id='btnContainer' className='flex items-center justify-center gap-[2rem]'>
+                    <button onClick={handleEdit} className='px-[1rem] py-[0.5rem] bg-[#cfd7db] text-black cursor-pointer duration-150 hover:bg-[#6b8493] font-semibold'>Edit</button>
+                    <button  className='px-[1rem] py-[0.5rem] bg-[#cfd7db] text-black cursor-pointer duration-150  hover:bg-[#6b8493] font-semibold'>PDF</button>
+                </div>
+        </div>
+          )
+        }
+
+
+        {/* Output Section starts here */}
+
+        
+
+
+      </div>
     </>
   )
 }
