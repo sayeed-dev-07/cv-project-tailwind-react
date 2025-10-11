@@ -9,9 +9,12 @@ import Output from './components/Output'
 
 function App() {
 
+  const [data, setData] = useState(Data)
+  const [infoData, setInfoData] = useState({...Data})
+
   const [inputShow, setInputShow] = useState(true);
   function handleSubmit(){
-  
+    setData({...data, ...infoData})
     setInputShow(false)
   }
   function handleEdit(){
@@ -28,9 +31,9 @@ function App() {
           inputShow ? (
 
             <form onSubmit={handleSubmit} className='md:w-[80%] w-full lg:w-[60%] my-[0] sm:my-[5rem] py-[3rem] mx-auto px-[1rem] md:px-[3rem] shadow-xl flex flex-col'>
-          <GeneralSec/>
+          <GeneralSec dataFile={infoData} setDataFile={setInfoData}/>
           <div className='w-full border-dashed border-1 my-[4rem]'></div>
-          <Information title='Education' name='School/College' position='Degree' to='Until (Skip if still studying)' idDate={[1, 2]} responsibilities = {false} />
+          <Information  title='Education' name='School/College' position='Degree' to='Until (Skip if still studying)' idDate={[1, 2]} responsibilities = {false} />
           <div className='w-full border-dashed border-1 my-[4rem]'></div>
           <Information/>
           <button type='submit' className='mt-[2rem] px-[1rem] py-[0.5rem] bg-[#f2f7fb] text-black cursor-pointer duration-150 w-[40%] md:w-[20%] mx-auto hover:bg-[#bed6ea] font-semibold'>Submit</button>

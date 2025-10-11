@@ -1,20 +1,20 @@
 const Data = {
-    name : 'sayeed',
-    email:'kaihiwataridb07@gmail.com',
-    number: '01727482794',
-    address: 'dhaka',
+    name : '',
+    email:'',
+    number: '',
+    address: '',
     education: {
-        name:'ssc',
-        position:'student',
-        from:'06-95-32',
-        to:'Present'
+        name:'',
+        position:'',
+        from:'',
+        to:'present'
     },
     company: {
-        name:'bank',
-        position:'ce0',
-        from:'f44',
-        to:'Present',
-        responsibilities:'hi im sayeed'
+        name:'',
+        position:'',
+        from:'',
+        to:'present',
+        responsibilities:''
     }
 }
 
