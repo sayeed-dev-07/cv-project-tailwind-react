@@ -16,14 +16,17 @@ function GeneralSec({dataFile, setDataFile, dtitle ='Personal Details', dname ='
     }
     function handleChangeEmail(e){
         const val = e.target.value;
+        setfEmail(val);
         setDataFile((prev) => ({ ...prev, email: val }));
     }
     function handleChangeNumber(e){
        const val = e.target.value;
+       setfnumber(val)
        setDataFile((prev) => ({ ...prev, number: val }));
     }
     function handleChangeAdd(e){
         const val = e.target.value;
+        setfAdd(val)
         setDataFile((prev) => ({ ...prev, address: val }));
     }
 
