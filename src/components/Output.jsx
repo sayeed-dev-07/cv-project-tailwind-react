@@ -13,19 +13,19 @@ function Output({ data }) {
                 <div className='w-full flex items-center justify-center my-[2rem] gap-x-[10%] flex-wrap gap-y-[0.5rem]'>
                     <div className='flex text-2xl items-center gap-x-[0.5rem] cursor-pointer font-medium'>
                         <div>
-                            <img src="../public/mail.svg" alt="mail" />
+                            <img src="/mail.svg" alt="mail" />
                         </div>
                         <p>{email}</p>
                     </div>
                     <div className='flex text-2xl items-center gap-x-[0.5rem] cursor-pointer capitalize font-medium'>
                         <div>
-                            <img src="../public/call.svg" alt="phone" />
+                            <img src="/call.svg" alt="phone" />
                         </div>
                         <p>{number}</p>
                     </div>
                     <div className='flex text-2xl items-center gap-x-[0.5rem] cursor-pointer capitalize font-medium'>
                         <div>
-                            <img src="../public/location.svg" alt="location" />
+                            <img src="/location.svg" alt="location" />
                         </div>
                         <p>{address}</p>
                     </div>
