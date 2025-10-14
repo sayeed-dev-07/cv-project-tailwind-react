@@ -7,13 +7,13 @@ const Data = {
         name:'',
         position:'',
         from:'',
-        to:'present'
+        to:''
     },
     company: {
         name:'',
         position:'',
         from:'',
-        to:'present',
+        to:'',
         responsibilities:''
     }
 }
